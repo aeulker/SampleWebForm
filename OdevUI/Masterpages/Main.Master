@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="OdevUI.Masterpages.Main" %>
+
+
+<%@ Register Src="~/UserControls/User.ascx" TagPrefix="uc1" TagName="user" %>
+<%@ Register Src="~/UserControls/Menu.ascx" TagPrefix="uc1" TagName="menu" %>
+<%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="uc1" TagName="footer" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="mainHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div style="margin: 0 auto; width: 980px;">
+        <form id="form1" runat="server">
+
+            <table style="width: 980px;">
+                <tr style="height: 100px;">
+                    <td style="width: 680px;">
+                        <asp:ImageButton ID="btnLogo" Style="width: 200px; float: left;" ImageUrl="~/content/images/zihinoyunlari.png" runat="server" OnClick="btnLogo_Click" />
+                    </td>
+                    <td style="width: 300px; vertical-align: bottom;">
+                        <asp:TextBox ID="txtSearch" runat="server" Style="float: right; margin-bottom: 5px;" placeholder="Ara"></asp:TextBox>
+                    </td>
+                </tr>
+                <tr style="height: 35px; background-color: rgb(37, 150, 190); color: white;">
+                    <td style="width: 680px;">
+                        <uc1:menu runat="server" ID="menu" />
+                    </td>
+                    <td style="width: 300px;">
+                        <uc1:user runat="server" ID="user" />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div style="min-height: 700px;">
+                            <asp:ContentPlaceHolder runat="server" ID="mainBody">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr style="height: 35px; background-color: rgb(37, 150, 190); color: white;">
+                    <td colspan="2">
+                        <uc1:footer runat="server" ID="footer" />
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</body>
+</html>

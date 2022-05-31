@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+	<Ad>
+		<ImageUrl>~/Content/Images/braingames.jpg</ImageUrl>
+		<NavigateUrl> http://www.zihinoyunlari.com</NavigateUrl>
+		<Impressions>
+			30
+		</Impressions>
+		<Keyword>Zihin Oyunlari 1</Keyword>
+		<Caption> Başlık 1</Caption>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Content/Images/braingames2.jpg</ImageUrl>
+		<NavigateUrl>http://www.zihinoyunlari.com</NavigateUrl>
+		<Impressions>
+			30			
+		</Impressions>
+		<Keyword>Zihin Oyunlari 2</Keyword>
+		<Caption> Başlık 2</Caption>
+	</Ad>
+	<Ad>
+		<ImageUrl>~/Content/Images/chess.jpg</ImageUrl>
+		<NavigateUrl>http://www.zihinoyunlari.com</NavigateUrl>
+		<Impressions>
+			30
+		</Impressions>
+		<Keyword> Zihin Oyunlari 3 </Keyword>
+		<Caption> Başlık 3</Caption>
+	</Ad>
+</Advertisements>
