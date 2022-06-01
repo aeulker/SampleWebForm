@@ -14,23 +14,23 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <div style="margin: 0 auto; width: 980px;">
+    <div style="margin: 0 auto; width: 1280px;">
         <form id="form1" runat="server">
 
-            <table style="width: 980px;">
+            <table style="width: 1280px;">
                 <tr style="height: 100px;">
-                    <td style="width: 680px;">
+                    <td style="width: 880px;">
                         <asp:ImageButton ID="btnLogo" Style="width: 200px; float: left;" ImageUrl="~/content/images/zihinoyunlari.png" runat="server" OnClick="btnLogo_Click" />
                     </td>
-                    <td style="width: 300px; vertical-align: bottom;">
+                    <td style="width: 400px; vertical-align: bottom;">
                         <asp:TextBox ID="txtSearch" runat="server" Style="float: right; margin-bottom: 5px;" placeholder="Ara"></asp:TextBox>
                     </td>
                 </tr>
                 <tr style="height: 35px; background-color: rgb(37, 150, 190); color: white;">
-                    <td style="width: 680px;">
+                    <td style="width: 880px;">
                         <uc1:menu runat="server" ID="menu" />
                     </td>
-                    <td style="width: 300px;">
+                    <td style="width: 400px;">
                         <uc1:user runat="server" ID="user" />
                     </td>
                 </tr>

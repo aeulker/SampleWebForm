@@ -34,7 +34,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Gender</td>
+                <td>Cinsiyet</td>
                 <td>:</td>
                 <td>
                     <asp:Label ID="lblGender" runat="server" Text=""></asp:Label>
