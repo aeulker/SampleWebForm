@@ -80,6 +80,7 @@
     <Content Include="Home.aspx" />
     <Content Include="Messages.aspx" />
     <Content Include="Order\OrderList.aspx" />
+    <Content Include="Product\ProductDetail.aspx" />
     <Content Include="Product\ProductList.aspx" />
     <Content Include="SliderImages.aspx" />
     <Content Include="UserControls\AccountMenu.ascx" />
@@ -155,6 +156,13 @@
     </Compile>
     <Compile Include="Order\OrderList.aspx.designer.cs">
       <DependentUpon>OrderList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\ProductDetail.aspx.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\ProductDetail.aspx.designer.cs">
+      <DependentUpon>ProductDetail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Product\ProductList.aspx.cs">
       <DependentUpon>ProductList.aspx</DependentUpon>

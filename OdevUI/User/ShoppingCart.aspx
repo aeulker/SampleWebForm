@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
-<%--    <asp:GridView ID="gvShoppingCart" runat="server" AllowPaging="True" DataKeyNames="Id"
+    <asp:GridView ID="gvShoppingCart" runat="server" AllowPaging="True" DataKeyNames="Id"
         AutoGenerateColumns="False" CellPadding="3" PageSize="20" Width="1000px"
         OnPageIndexChanging="gvShoppingCart_PageIndexChanging"
         OnSelectedIndexChanged="gvShoppingCart_SelectedIndexChanged"
@@ -37,5 +37,5 @@
         <SortedAscendingHeaderStyle BackColor="#007DBB" />
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#00547E" />
-    </asp:GridView>--%>
+    </asp:GridView>
 </asp:Content>

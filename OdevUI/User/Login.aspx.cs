@@ -16,6 +16,7 @@ namespace OdevUI.User
         {
             if (!Page.IsPostBack)
             {
+
                 if (Session["UserId"] != null)
                 {
                     Response.Redirect("~/Home.aspx");
