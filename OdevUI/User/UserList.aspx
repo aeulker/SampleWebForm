@@ -2,6 +2,9 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="mainTitle" runat="server">
+    <h2>Kullanıcı İşlemleri</h2>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
     <div>
 
@@ -13,7 +16,7 @@
             OnRowCancelingEdit="grdUserList_RowCancelingEdit" 
             OnRowCommand="grdUserList_RowCommand" 
             OnRowUpdating="grdUserList_RowUpdating" 
-            Width="800px" CellPadding="3" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
+            Width="1000px" CellPadding="3" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
             <Columns>
                 <asp:TemplateField HeaderText="Id">
                     <ItemTemplate>

@@ -1,29 +1,33 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpages/Account.Master" AutoEventWireup="true" CodeBehind="Messages.aspx.cs" Inherits="OdevUI.Messages" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="mainTitle" runat="server">
+    <h2>Mesaj İşlemleri</h2>
+</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
 
     <asp:GridView ID="gvMessages" runat="server" AllowPaging="True" DataKeyNames="Id"
-        AutoGenerateColumns="False" CellPadding="3" PageSize="20"  Width="800px"
+        AutoGenerateColumns="False" CellPadding="3" PageSize="20"  Width="1000px"
+        OnPageIndexChanging="gvMessages_PageIndexChanging"
            OnRowDeleting="gvMessages_RowDeleting" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
         <Columns>
             <asp:BoundField DataField="UserName" HeaderText="Kullanıcı" >
-            <ItemStyle Width="100px" />
+            <ItemStyle Width="150px" />
             </asp:BoundField>
             <asp:BoundField DataField="SenderName" HeaderText="Gönderici Adı" >
-            <ItemStyle Width="100px" />
+            <ItemStyle Width="150px" />
             </asp:BoundField>
             <asp:BoundField DataField="Email" HeaderText="Email" >
-            <ItemStyle Width="100px" />
+            <ItemStyle Width="150px" />
             </asp:BoundField>
             <asp:BoundField DataField="Subject" HeaderText="Başlık" >
-            <ItemStyle Width="100px" />
+            <ItemStyle Width="200px" />
             </asp:BoundField>
             <asp:BoundField DataField="Message" HeaderText="Mesaj" >
-            <ItemStyle Width="300px" />
+            <ItemStyle Width="400px" />
             </asp:BoundField>
             <asp:CommandField ButtonType="Button" DeleteText="Sil" ShowDeleteButton="True" >
-            <ItemStyle Width="100px" />
+            <ItemStyle Width="70px" />
             </asp:CommandField>
         </Columns>
         <FooterStyle BackColor="White" ForeColor="#000066" />

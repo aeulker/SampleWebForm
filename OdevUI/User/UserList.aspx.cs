@@ -27,8 +27,31 @@ namespace OdevUI.User
             DataTable dt = new DataTable();
             da.Fill(dt);
 
-            grdUserList.DataSource = dt;
-            grdUserList.DataBind();
+            if (dt.Rows.Count > 0)
+            {
+                grdUserList.DataSource = dt;
+                grdUserList.DataBind();
+            }
+            else
+            {
+                DataTable dtEmpty = new DataTable();
+                dtEmpty.Columns.Add("Id", typeof(int));
+                dtEmpty.Columns.Add("UserName", typeof(string));
+                dtEmpty.Columns.Add("Password", typeof(string));
+                dtEmpty.Columns.Add("FirstName", typeof(string));
+                dtEmpty.Columns.Add("LastName", typeof(string));
+                dtEmpty.Columns.Add("Gender", typeof(string));
+                dtEmpty.Columns.Add("Email", typeof(string));
+                dtEmpty.Columns.Add("PhoneNumber", typeof(string));
+                dtEmpty.Columns.Add("Address", typeof(string));
+                dtEmpty.Columns.Add("IsAdmin", typeof(bool));
+
+                DataRow datatRow = dtEmpty.NewRow();
+                dtEmpty.Rows.Add(datatRow);
+                grdUserList.DataSource = dtEmpty;
+                grdUserList.DataBind();
+                grdUserList.Rows[0].Visible = false;
+            }
 
         }
 
@@ -38,25 +61,27 @@ namespace OdevUI.User
           
             BindGrid();
         }
+
         protected void grdUserList_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
         {
             grdUserList.EditIndex = -1;
 
             BindGrid();
         }
+
         protected void grdUserList_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
-            grdUserList.EditIndex = e.NewPageIndex;
+            grdUserList.PageIndex = e.NewPageIndex;
 
             BindGrid();
         }
+
         protected void grdUserList_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int userId = Convert.ToInt32(grdUserList.DataKeys[e.RowIndex].Values["Id"].ToString());
 
-            string sql = "delete from [User]" +
-
-                 " where Id=" + userId + "";
+            string sql = " delete from [User] " +
+                         " where Id=" + userId + "";
 
             OleDbDataAdapter da = new OleDbDataAdapter(sql, WebConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             DataTable dt = new DataTable();
@@ -100,8 +125,6 @@ namespace OdevUI.User
             }
         }
 
-
-
         protected void grdUserList_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
             int userId = Convert.ToInt32(grdUserList.DataKeys[e.RowIndex].Values["Id"].ToString());
@@ -135,7 +158,6 @@ namespace OdevUI.User
             BindGrid();
          
         }
-
- 
+         
     }
 }
