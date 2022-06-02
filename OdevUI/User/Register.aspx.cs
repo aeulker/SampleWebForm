@@ -37,17 +37,16 @@ namespace OdevUI.User
             }
             else
             {
-                int gender = Convert.ToInt32(ddlGender.SelectedValue);
+
                 string sql = "insert into [User]([UserName],[Password],[FirstName],[LastName],[Gender],[Email],[PhoneNumber],[Address],[IsAdmin])  " +
                             "values ('" + txtUserName.Text + "' , " +
                                     "'" + txtPassword.Text + "' , " +
                                     "'" + txtName.Text + "' , " +
                                     "'" + txtSirName.Text + "' , " +
-                                    gender + " , " +
+                                    "'" + ddlGender.SelectedValue + "' , " +
                                     "'" + txtEmail.Text + "' , " +
                                     "'" + txtPhoneNumber.Text + "' , " +
-                                    "'" + txtAddress.Text + "' ," +
-                                    0 + ")";
+                                    "'" + txtAddress.Text + "' ,false )";
 
                 OleDbDataAdapter da = new OleDbDataAdapter(sql, WebConfigurationManager.ConnectionStrings["conn"].ConnectionString);
                 DataTable dt = new DataTable();

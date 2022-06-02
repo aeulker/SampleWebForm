@@ -35,15 +35,16 @@ namespace OdevUI.UserControls
                         lnkLogin.Visible = false;
                         lnkLogout.Visible = true;
                         lnkAccount.Visible = true;
-                        lnkCart.Visible = true;
+                        //lnkCart.Visible = true;
                     }
                 }
                 else
                 {
                     lnkLogin.Visible = true;
+                    //lnkCart.Visible = true;
                     lnkLogout.Visible = false;
                     lnkAccount.Visible = false;
-                    lnkCart.Visible = false;
+   
                 }
             }
         }

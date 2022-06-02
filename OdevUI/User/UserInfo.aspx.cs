@@ -29,18 +29,8 @@ namespace OdevUI.User
                         lblUserName.Text = dtCheck.Rows[0]["UserName"].ToString();
                         lblPassword.Text = dtCheck.Rows[0]["Password"].ToString();
                         lblName.Text = dtCheck.Rows[0]["FirstName"].ToString() + " " + dtCheck.Rows[0]["LastName"].ToString();
-                        if (dtCheck.Rows[0]["Gender"].ToString() == "0")
-                        {
-                            lblGender.Text = "Diğer";
-                        }
-                        else if (dtCheck.Rows[0]["Gender"].ToString() == "1")
-                        {
-                            lblGender.Text = "Erkek";
-                        }
-                        else
-                        {
-                            lblGender.Text = "Kadın";
-                        }
+
+                        lblGender.Text = dtCheck.Rows[0]["Gender"].ToString();
                         lblEmail.Text = dtCheck.Rows[0]["Email"].ToString();
                         lblPhoneNumber.Text = dtCheck.Rows[0]["PhoneNumber"].ToString();
                         lblAddress.Text = dtCheck.Rows[0]["Address"].ToString();

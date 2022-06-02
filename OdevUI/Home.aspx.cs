@@ -12,6 +12,8 @@ namespace OdevUI
 {
     public partial class Home : System.Web.UI.Page
     {
+   
+
         protected void Page_Load(object sender, EventArgs e)
         {
             int categoryId = 0;
@@ -28,8 +30,29 @@ namespace OdevUI
             if (Page.IsPostBack == false)
             {
                 LoadProductCategories(categoryId);
+
+                LoadAddRotator();
             }
         }
+
+        private void LoadAddRotator()
+        {
+            string sql = "select AlternateText,ImageUrl,NavigateUrl from SliderImage";
+
+            OleDbDataAdapter adsa = new OleDbDataAdapter(sql, WebConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+            DataTable dtAdds = new DataTable();
+            adsa.Fill(dtAdds);
+            if (dtAdds.Rows.Count>0)
+            {
+                adBanner.DataSource = dtAdds;
+                adBanner.DataBind();
+            }
+            else
+            {
+                adBanner.AdvertisementFile = "~/Content/adv.xml";
+            }
+        }
+
         private void LoadProductCategories(int categoryId)
         {
             string sql = "Select * from Category";
@@ -68,5 +91,7 @@ namespace OdevUI
                 }
             }
         }
+       
+
     }
 }

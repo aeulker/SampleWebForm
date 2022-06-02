@@ -4,7 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
     <div style="display: flex; justify-content: center; height: 300px;">
-        <asp:AdRotator ID="adBanner" AdvertisementFile="~/Content/adv.xml" runat="server" Height="300px" Width="750px" />
+      <asp:AdRotator ID="adBanner"  runat="server" Height="300px" Width="750px" />
+
     </div>
     <div>
 
@@ -24,7 +25,7 @@
                     <td>
                         <asp:ListView ID="lvCategoryProduts" runat="server" ItemPlaceholderID="placeHolderProduct">
                             <LayoutTemplate>
-                                <table style="width:100%;">
+                                <table style="width: 100%;">
                                     <tr>
                                         <td style="width: 25%;"></td>
                                         <td style="width: 35%;"></td>
@@ -37,7 +38,7 @@
                             </LayoutTemplate>
                             <ItemTemplate>
                                 <tr style="height: 150px;">
-                                    <td >
+                                    <td>
                                         <asp:Image ID="imgProduct" runat="server" Width="100" Height="100" ImageUrl='<%# "~"+Eval("ImageUrl") %>' /></td>
                                     <td>
                                         <table>
@@ -63,19 +64,19 @@
                                             </tr>
                                         </table>
                                     </td>
-                                    <td style=" float: right; padding: 20px; ">
-                                        <table style="font-size:20px; width:100%;">
+                                    <td style="float: right; padding: 20px;">
+                                        <table style="font-size: 20px; width: 100%;">
                                             <tr style="background-color: yellow; text-decoration: line-through;">
-                                                <td style="float:right;">
+                                                <td style="float: right;">
                                                     <%#Eval("OldUnitPrice") %> ₺ 
                                                 </td>
                                             </tr>
                                             <tr style="background-color: red; color: white;">
 
-                                                <td ><%#Eval("Discount") %>% İndirim</td>
+                                                <td><%#Eval("Discount") %>% İndirim</td>
                                             </tr>
                                             <tr>
-                                                <td style="float:right;font-size:25px;"><%#Eval("UnitPrice") %> ₺ </td>
+                                                <td style="float: right; font-size: 25px;"><%#Eval("UnitPrice") %> ₺ </td>
                                             </tr>
                                         </table>
                                     </td>

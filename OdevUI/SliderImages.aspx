@@ -28,6 +28,7 @@
                 <asp:TemplateField HeaderText="Resim">
                     <EditItemTemplate>
                         <asp:FileUpload ID="fuSliderImageUrl" runat="server" Width="300" />
+                        <asp:Label ID="lblSliderImageUrl" runat="server" Text='<%# Eval("ImageUrl") %>'></asp:Label>
                     </EditItemTemplate>
                     <FooterTemplate>
                         <asp:FileUpload ID="fuNSliderImageUrl" runat="server" Width="300" />
@@ -36,6 +37,28 @@
                         <asp:Image ID="imgImageUrl" runat="server" Width="100" Height="100" ImageUrl='<%# Eval("ImageUrl") %>' />
                     </ItemTemplate>
                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Url">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtNavigateUrl" runat="server" Text='<%# Eval("NavigateUrl") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtNNavigateUrl" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblNavigateUrl" runat="server" Text='<%# Eval("NavigateUrl") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Alternatif Yazı">
+                    <EditItemTemplate>
+                        <asp:TextBox ID="txtAlternateText" runat="server" Text='<%# Eval("AlternateText") %>'></asp:TextBox>
+                    </EditItemTemplate>
+                    <FooterTemplate>
+                        <asp:TextBox ID="txtNAlternateText" runat="server"></asp:TextBox>
+                    </FooterTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="lblAlternateText" runat="server" Text='<%# Eval("AlternateText") %>'></asp:Label>
+                    </ItemTemplate>
                 </asp:TemplateField>
                 <asp:CommandField ButtonType="Button" ShowEditButton="True" EditText="Düzenle" HeaderText="Düzenle" UpdateText="Güncelle">
                     <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" />
