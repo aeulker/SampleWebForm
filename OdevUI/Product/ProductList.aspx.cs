@@ -202,6 +202,9 @@ namespace OdevUI.Product
             lblImagesMessage.Text = string.Empty;
             lblImagesMessage.Visible = false;
             tblImages.Visible = false;
+
+            btnSaveProduct.Visible = true;
+            btnUpdateProduct.Visible = false;
             gvProductImageList.DataSource = null;
             gvProductImageList.DataBind();
 

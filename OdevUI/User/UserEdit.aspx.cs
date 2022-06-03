@@ -54,13 +54,14 @@ namespace OdevUI.User
             }
             else
             {
-                int gender = Convert.ToInt32(ddlGender.SelectedValue);
+  
+
                 string sql = "update [User]" +
                              "set [UserName] ='" + txtUserName.Text + "'" +
                              " ,  [Password] = '" + txtPassword.Text + "'" +
                              " ,  [FirstName] = '" + txtName.Text + "'" +
                              " ,  [LastName] = '" + txtSirName.Text + "'" +
-                             " ,  [Gender] = " + gender.ToString() +
+                             " ,  [Gender] =' " + ddlGender.SelectedValue + "'" +
                              " ,  [Email] = '" + txtEmail.Text + "'" +
                              " ,  [PhoneNumber] = '" + txtPhoneNumber.Text + "'" +
                              " ,  [Address] = '" + txtAddress.Text + "'" +

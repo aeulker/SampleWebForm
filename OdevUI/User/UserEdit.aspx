@@ -49,9 +49,9 @@
                 <td>:</td>
                 <td>
                     <asp:DropDownList ID="ddlGender" runat="server">
-                        <asp:ListItem Value="0">Diğer</asp:ListItem>
-                        <asp:ListItem Value="1">Erkek</asp:ListItem>
-                        <asp:ListItem Value="2">Kadın</asp:ListItem>
+                        <asp:ListItem Value="Diğer">Diğer</asp:ListItem>
+                        <asp:ListItem Value="Erkek">Erkek</asp:ListItem>
+                        <asp:ListItem Value="Kadın">Kadın</asp:ListItem>
                     </asp:DropDownList>
                 </td>
             </tr>
