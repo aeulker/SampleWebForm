@@ -38,6 +38,7 @@ namespace OdevUI
                 DataTable dtEmpty = new DataTable();
                 dtEmpty.Columns.Add("Id", typeof(int));
                 dtEmpty.Columns.Add("UserId", typeof(int));
+                dtEmpty.Columns.Add("UserName", typeof(string));
                 dtEmpty.Columns.Add("SenderName", typeof(string));
                 dtEmpty.Columns.Add("Email", typeof(string));
                 dtEmpty.Columns.Add("Subject", typeof(string));

@@ -72,6 +72,7 @@
     <Content Include="Category\CategoryList.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\adv.xml" />
+    <Content Include="Content\Images\addtocart.png" />
     <Content Include="Content\Images\braingames2.jpg" />
     <Content Include="Content\Images\chess.jpg" />
     <Content Include="Content\Images\zihinoyunlari.png" />
