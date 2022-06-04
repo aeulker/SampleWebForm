@@ -19,7 +19,7 @@ namespace OdevUI.UserControls
             {
                 bool isActivePage = false;
  
-                if (Request.RawUrl== "/Home.aspx")
+                if (Request.FilePath== "/Home.aspx")
                 {
                     isActivePage = true;
                 }
@@ -47,7 +47,7 @@ namespace OdevUI.UserControls
 
                 
 
-                if (Request.RawUrl == "/About.aspx")
+                if (Request.FilePath == "/About.aspx")
                 {
                     isActivePage = true;
                 }
@@ -59,7 +59,7 @@ namespace OdevUI.UserControls
                 menuHeader.Items.Add(new MenuItem() { Text = "Hakkımızda", NavigateUrl = "/About.aspx", Selected = isActivePage });
 
 
-                if (Request.RawUrl == "/Contact.aspx")
+                if (Request.FilePath == "/Contact.aspx")
                 {
                     isActivePage = true;
                 }

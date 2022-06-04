@@ -3,9 +3,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainTitle" runat="server">
-    <h2>Kullanıcı İşlemleri</h2>
+    <h3>Kullanıcı İşlemleri</h3>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
+    <hr/>
     <div>
 
         <asp:GridView ID="grdUserList" runat="server" AutoGenerateColumns="False" DataKeyNames="Id"

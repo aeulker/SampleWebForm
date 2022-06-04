@@ -14,8 +14,8 @@ namespace OdevUI.UserControls
             if (!Page.IsPostBack)
             {
                 bool isActivePage = false;
-                string requestPath = Request.Url.AbsolutePath;
-                if (requestPath == "/User/UserInfo.aspx" || requestPath == "/User/UserEdit.aspx")
+              
+                if (Request.FilePath == "/User/UserInfo.aspx" || Request.FilePath == "/User/UserEdit.aspx")
                 {
                     isActivePage = true;
                 }
@@ -23,7 +23,7 @@ namespace OdevUI.UserControls
                 menuAccount.Items.Add(new MenuItem() { Text = "Üyelik Bilgilerim", NavigateUrl = "/User/UserInfo.aspx", Selected = isActivePage });
 
 
-                if (requestPath == "/User/UserOrders.aspx")
+                if (Request.FilePath == "/User/UserOrders.aspx")
                 {
                     isActivePage = true;
                 }
@@ -36,7 +36,7 @@ namespace OdevUI.UserControls
        
                 if (Session["IsAdmin"] != null && Session["IsAdmin"].ToString() == "1")
                 {
-                    if (requestPath == "/Product/ProductList.aspx")
+                    if (Request.FilePath == "/Product/ProductList.aspx")
                     {
                         isActivePage = true;
                     }
@@ -47,7 +47,7 @@ namespace OdevUI.UserControls
 
                     menuAccount.Items.Add(new MenuItem() { Text = "Ürün İşlemleri", NavigateUrl = "/Product/ProductList.aspx", Selected = isActivePage });
 
-                    if (requestPath == "/Category/CategoryList.aspx")
+                    if (Request.FilePath == "/Category/CategoryList.aspx")
                     {
                         isActivePage = true;
                     }
@@ -58,7 +58,7 @@ namespace OdevUI.UserControls
 
                     menuAccount.Items.Add(new MenuItem() { Text = "Ürün Kategori İşlemleri", NavigateUrl = "/Category/CategoryList.aspx", Selected = isActivePage });
 
-                    if (requestPath == "/Order/OrderList.aspx")
+                    if (Request.FilePath == "/Order/OrderList.aspx")
                     {
                         isActivePage = true;
                     }
@@ -69,7 +69,7 @@ namespace OdevUI.UserControls
 
                     menuAccount.Items.Add(new MenuItem() { Text = "Sipariş Takibi", NavigateUrl = "/Order/OrderList.aspx", Selected = isActivePage });
 
-                    if (requestPath == "/User/UserList.aspx")
+                    if (Request.FilePath == "/User/UserList.aspx")
                     {
                         isActivePage = true;
                     }
@@ -80,7 +80,7 @@ namespace OdevUI.UserControls
 
                     menuAccount.Items.Add(new MenuItem() { Text = "Kullanıcı İşlemleri", NavigateUrl = "/User/UserList.aspx", Selected = isActivePage });
 
-                    if (requestPath == "/Messages.aspx")
+                    if (Request.FilePath == "/Messages.aspx")
                     {
                         isActivePage = true;
                     }
@@ -91,7 +91,7 @@ namespace OdevUI.UserControls
 
                     menuAccount.Items.Add(new MenuItem() { Text = "Mesajlar", NavigateUrl = "/Messages.aspx", Selected = isActivePage });
 
-                    if (requestPath == "/SliderImages.aspx")
+                    if (Request.FilePath == "/SliderImages.aspx")
                     {
                         isActivePage = true;
                     }

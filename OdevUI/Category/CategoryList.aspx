@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainTitle" runat="server">
-    <h2>Kategori İşlemleri</h2>
+    <h3>Kategori İşlemleri</h3>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
      <div style="display:inline-table;">

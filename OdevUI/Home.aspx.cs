@@ -30,9 +30,8 @@ namespace OdevUI
             if (Page.IsPostBack == false)
             {
                 LoadProductCategories(categoryId);
-
-                LoadAddRotator();
             }
+            LoadAddRotator();
         }
 
         private void LoadAddRotator()

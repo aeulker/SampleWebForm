@@ -1,18 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Masterpages/Account.Master" AutoEventWireup="true" CodeBehind="UserOrders.aspx.cs" Inherits="OdevUI.User.UserOrders" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="mainHead" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="mainTitle" runat="server">
-    <h2>Siparişlerim</h2>
+    <h3>Siparişlerim</h3>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
     <asp:HiddenField ID="hdnActiveOrderId" runat="server" />
     <div style="padding: 0px 20px; width: 100%;">
-        <hr />
-        <h3 style="text-align: center;">Sipariş Detayı</h3>
         <asp:GridView ID="gvOrderDetail" runat="server" AllowPaging="True" DataKeyNames="Id"
             AutoGenerateColumns="False" CellPadding="3" PageSize="20" Width="1000px"
             OnPageIndexChanging="gvOrderDetail_PageIndexChanging"
-            BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
+            BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Caption="Sipariş Detayı" CaptionAlign="Top" EmptyDataText="Sipariş kaydı bulunmuyor" ShowHeaderWhenEmpty="True">
             <Columns>
                 <asp:BoundField DataField="OrderId" HeaderText="Sipariş No">
                     <ItemStyle Width="150px" HorizontalAlign="Center" VerticalAlign="Middle" />
@@ -42,15 +41,15 @@
         </asp:GridView>
 
     </div>
+    <hr />
     <div style="padding: 0px 20px; min-width: 1000px; width: 100%;">
 
-        <hr />
-        <h3 style="text-align: center;">Sipariş Listesi</h3>
+
         <asp:GridView ID="gvOrders" runat="server" AllowPaging="True" DataKeyNames="OrderId"
             AutoGenerateColumns="False" CellPadding="3" PageSize="20" Width="1000px"
             OnPageIndexChanging="gvOrders_PageIndexChanging"
             OnSelectedIndexChanged="gvOrders_SelectedIndexChanged"
-            BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px">
+            BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Caption="Sipariş Listesi" CaptionAlign="Top">
             <Columns>
                 <asp:BoundField DataField="OrderId" HeaderText="Sipariş No">
                     <ItemStyle Width="150px" HorizontalAlign="Center" VerticalAlign="Middle" />

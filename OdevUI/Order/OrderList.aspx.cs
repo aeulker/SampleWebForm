@@ -23,9 +23,10 @@ namespace OdevUI.Order
 
         private void BindGrid()
         {
+
             string sql = "SELECT "
                       + "          userOrder.UserName as UserName "
-                      + "         , MAX(userOrder.Id) as OrderId "
+                      + "         , userOrder.Id as OrderId "
                       + "         , MAX(userOrder.OrderDate) as OrderDate "
                       + "         , SUM(od.Quantity) as OrderCount "
                       + "         , SUM(od.Quantity * od.UnitPrice) as OrderTotal "
@@ -35,7 +36,8 @@ namespace OdevUI.Order
                       + "              INNER JOIN[User] u on o.UserId = u.Id "
                       + "          ) as userOrder "
                       + "          INNER JOIN OrderDetail od on od.OrderId = userOrder.Id "
-                      + "         GROUP BY userOrder.UserName ";
+                    //  + "         where userOrder.UserId = " + Session["UserId"].ToString() 
+                      + "         GROUP BY userOrder.UserName, userOrder.UserId, userOrder.Id";
             OleDbDataAdapter da = new OleDbDataAdapter(sql, WebConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -46,9 +48,10 @@ namespace OdevUI.Order
                 hdnActiveOrderId.Value = string.Empty;
                 //tblOrderDetail.Visible = false;
 
-                gvOrders.DataSource = dt;
-                gvOrders.DataBind();
+            
             }
+            gvOrders.DataSource = dt;
+            gvOrders.DataBind();
 
         }
 

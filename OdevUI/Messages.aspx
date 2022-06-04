@@ -5,7 +5,7 @@
     <h2>Mesaj İşlemleri</h2>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
-
+    <hr/>
     <asp:GridView ID="gvMessages" runat="server" AllowPaging="True" DataKeyNames="Id"
         AutoGenerateColumns="False" CellPadding="3" PageSize="20"  Width="1000px"
         OnPageIndexChanging="gvMessages_PageIndexChanging"

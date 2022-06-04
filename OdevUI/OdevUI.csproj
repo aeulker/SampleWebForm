@@ -75,10 +75,12 @@
     <Content Include="Content\Images\addtocart.png" />
     <Content Include="Content\Images\braingames2.jpg" />
     <Content Include="Content\Images\chess.jpg" />
+    <Content Include="Content\Images\TRC20_USDT.jpg" />
     <Content Include="Content\Images\zihinoyunlari.png" />
     <Content Include="Content\Images\braingames.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
+    <Content Include="Crypto.aspx" />
     <Content Include="Messages.aspx" />
     <Content Include="Order\OrderList.aspx" />
     <Content Include="Product\ProductDetail.aspx" />
@@ -126,6 +128,13 @@
     </Compile>
     <Compile Include="Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Crypto.aspx.cs">
+      <DependentUpon>Crypto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Crypto.aspx.designer.cs">
+      <DependentUpon>Crypto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Masterpages\Account.Master.cs">
       <DependentUpon>Account.Master</DependentUpon>

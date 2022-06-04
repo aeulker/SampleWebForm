@@ -5,8 +5,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="mainBody" runat="server">
     <asp:HiddenField ID="hdnProductId" runat="server" />
 
-    <h2 style="text-align: center;">
-        <asp:Label ID="lblProductName" runat="server" Text="Product Name"></asp:Label></h2>
+    <h3 style="text-align: center;">
+        <asp:Label ID="lblProductName" runat="server" Text="Product Name"></asp:Label></h3>
     <h5 style="text-align: center;">
         <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label></h5>
     <table style="width: 80%; margin-left: 10%;">
